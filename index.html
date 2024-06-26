@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css.css" />
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Password Generator</h1>
+      <div class="generated-password">
+        <input id="password" placeholder="P4$5W0rD!" value="" disabled />
+        <div class="clickboard">
+          <p id="copied">copied</p>
+          <button id="copy"><img src="./images/icon-copy.svg" alt="" /></button>
+        </div>
+      </div>
+      <div class="content-container">
+        <form>
+          <div class="pass-length">
+            <label for="length-label">Password Length</label>
+            <input id="length" type="text" placeholder="0" disabled />
+          </div>
+          <div class="range-container">
+            <input
+              type="range"
+              name="range"
+              value="0"
+              min="0"
+              max="15"
+              id="inputRange"
+              class="inputRange"
+            />
+          </div>
+          <div class="includes">
+            <div class="inactive-box box" id="uppercase">
+              <img src="./images/icon-check.svg" alt="" />
+            </div>
+            <label for="uppercase">Include Uppercase Letters </label>
+          </div>
+          <div class="includes">
+            <div class="inactive-box box" id="lowercase">
+              <img src="./images/icon-check.svg" alt="" />
+            </div>
+            <label for="lowercase">Include Lowercase Letters </label>
+          </div>
+          <div class="includes">
+            <div class="inactive-box box" id="number">
+              <img src="./images/icon-check.svg" alt="" />
+            </div>
+            <label for="number">Include Numbers </label>
+          </div>
+          <div class="includes">
+            <div class="inactive-box box" id="symbol">
+              <img src="./images/icon-check.svg" alt="" />
+            </div>
+            <label for="symbol">Include Symbols </label>
+          </div>
+          <div class="strength">
+            <p class="is-strong">Strenght</p>
+
+            <div class="strength-bar">
+              <p class="strength-display">Too WEAK</p>
+              <div class="strength-capacity">
+                <div class="strenght-quality"></div>
+                <div class="strenght-quality"></div>
+                <div class="strenght-quality"></div>
+                <div class="strenght-quality"></div>
+              </div>
+            </div>
+          </div>
+          <button class="generate-password-btn" type="button">
+            Generate
+            <span>
+              <svg class="arrow" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  fill="#24232C"
+                  d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z"
+                />
+              </svg>
+            </span>
+          </button>
+        </form>
+      </div>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>

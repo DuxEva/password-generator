@@ -1,0 +1,394 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background-color: #18171f;
+  font-family: "Poppins", sans-serif;
+}
+
+.container h1 {
+  color: #817d92;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+#password {
+  color: white;
+  font-size: 32px;
+  background: #24232c;
+  border: none;
+  width: 80%;
+  outline: none;
+}
+
+.generated-password {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  width: 50%;
+  height: 10vh;
+  background-color: #24232c;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.clickboard {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#copied {
+  color: #a4ffaf;
+  font-size: 18px;
+  text-transform: uppercase;
+  transition: 0.5s ease-in-out;
+  display: none;
+}
+
+#copy {
+  background: #24232c;
+  cursor: pointer;
+  border: none;
+  outline: navajowhite;
+}
+
+#copy:hover {
+  color: white;
+}
+
+.pass-length {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+.pass-length label {
+  color: white;
+  font-size: 25px;
+}
+
+.pass-length input {
+  width: 50px;
+  height: 40px;
+  background: #24232c;
+  color: #a4ffaf;
+  text-align: center;
+  font-size: 20px;
+  border: none;
+  outline: none;
+}
+
+#length {
+  color: #a4ffaf;
+}
+
+#length::placeholder {
+  color: #a4ffaf;
+  font-size: 20px;
+}
+
+/* Choosing the lenght of password */
+
+.range-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.inputRange {
+  appearance: none;
+  background: #24232c;
+  width: 100%;
+  height: 15px;
+  border: 1px solid #18171f;
+  /* border-radius: 8px; */
+  background: linear-gradient(90deg, #a4ffaf 0%, #18171f 0%);
+  cursor: pointer;
+}
+
+/* Thumb: for Chrome, Safari, Edge */
+.inputRange::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 27px;
+  height: 27px;
+  border-radius: 9999px;
+  background: white;
+}
+.inputRange::-webkit-slider-thumb:hover {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #a4ffaf;
+  border-radius: 9999px;
+  background: #24232c;
+}
+
+/* Thumb: for Firefox */
+.inputRange::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #333333;
+  border-radius: 9999px;
+  background: #24232c;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  padding: 10px 40px;
+  width: 50%;
+  height: 70vh;
+  background-color: #24232c;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.includes {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 30px;
+  padding: 10;
+  margin: 14px 0;
+}
+
+.includes div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.inactive-box {
+  border: 2px solid white;
+  transition: 0.3s ease-in-out;
+}
+
+.includes div img {
+  width: 17px;
+  height: 17px;
+}
+
+input[type="checkbox"]:checked {
+  background: #a4ffaf;
+}
+
+.includes label {
+  font-size: 22px;
+}
+
+.strength {
+  width: 100%;
+  height: 60px;
+  background: #18171f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  padding: 10px 25px;
+}
+
+.strength p {
+  font-size: 20px;
+  color: #817d92;
+  text-transform: uppercase;
+  font-weight: 600;
+  position: relative;
+}
+
+.strength-bar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.strength-capacity {
+  display: flex;
+  border-radius: 5px;
+}
+
+.strenght-quality {
+  width: 20px;
+  height: 40px;
+  border-radius: 2px;
+  border: 2px solid #817d92;
+  /* background: #817D92; */
+  margin-right: 10px;
+}
+
+.strenght-too-weak {
+  background: #f64a4a;
+  border-color: #f64a4a;
+}
+
+.strenght-strong {
+  background: #a4ffaf;
+  border-color: #a4ffaf;
+}
+
+.strenght-weak {
+  background: #fb7c58;
+  border-color: #fb7c58;
+}
+
+.strenght-medium {
+  background: #f6f64a;
+  border-color: #f6f64a;
+}
+.strength-display {
+  margin-left: 15px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.generate-password-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
+  background: #a4ffaf;
+  color: #18171f;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 22px;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+  position: relative;
+}
+
+.generate-password-btn:hover {
+  background: #18171f;
+  color: #a4ffaf;
+  border: 2px solid #a4ffaf;
+  transition: 0.3s ease-in-out;
+}
+
+.arrow {
+  width: 30px;
+  height: 30px;
+  margin-left: 5px;
+  margin-top: 20px;
+  color: #18171f;
+}
+
+.generate-password-btn:hover .arrow path {
+  fill: #a4ffaf;
+}
+.active {
+  background: #a4ffaf;
+  border: 2px solid #a4ffaf;
+  transition: 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .generated-password {
+    padding: 10px;
+    width: 95%;
+    height: 5vh;
+  }
+
+  .content-container {
+    padding: 10px;
+    width: 95%;
+    height: 70vh;
+  }
+
+  .container h1 {
+    color: #817d92;
+    font-size: 21px;
+    margin-bottom: 15px;
+  }
+
+  .includes {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    height: 25px;
+    padding: 8px;
+    margin-bottom: 20px;
+  }
+
+  .includes div {
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+  }
+
+  .includes label {
+    font-size: 18px;
+  }
+
+  .strenght-quality {
+    width: 15px;
+    height: 35px;
+    border-radius: 2px;
+    border: 2px solid #817d92;
+    margin-right: 8px;
+  }
+
+  .strength {
+    width: 100%;
+    height: 40px;
+    background: #18171f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px 5px;
+  }
+
+  .strength p {
+    font-size: 16px;
+    color: #817d92;
+    text-transform: uppercase;
+    position: relative;
+  }
+  #password {
+    font-size: 18px;
+  }
+  .pass-length label {
+    color: white;
+    font-size: 18px;
+  }
+}
