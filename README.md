@@ -28,3 +28,5 @@ This project is a simple yet effective Password Generator built using HTML, CSS,
    ```bash
    git clone https://github.com/your-username/password-generator.git
    cd password-generator
+
+Here is the deployed version of the app: https://psswr-generator.netlify.app

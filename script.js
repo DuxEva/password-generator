@@ -11,6 +11,7 @@ const strongStrength = document.querySelectorAll(".strenght-quality");
 const strenghtMsg = document.querySelector(".strength-display");
 const copyBtn = document.getElementById("copy");
 const copyConfirmation = document.getElementById("copied");
+const icons = document.querySelectorAll(".icon");
 
 copyBtn.addEventListener("click", () => {
   password.select();
@@ -43,6 +44,10 @@ const characterTypes = [upperCase, lowerCase, numbers, symbols];
 characterTypes.forEach((type) => {
   type.addEventListener("click", () => {
     type.classList.toggle("active");
+    // show the image icon when the button is active
+    type.classList.contains("active")
+      ? (type.children[0].style.display = "block")
+      : (type.children[0].style.display = "none");
   });
 });
 

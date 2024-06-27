@@ -187,12 +187,14 @@ form {
   padding: 5px;
 }
 
+
 .inactive-box {
   border: 2px solid white;
   transition: 0.3s ease-in-out;
 }
 
-.includes div img {
+.icon {
+  display: none;
   width: 17px;
   height: 17px;
 }
